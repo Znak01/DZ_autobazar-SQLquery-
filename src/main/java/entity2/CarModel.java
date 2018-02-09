@@ -30,14 +30,14 @@ public class CarModel extends BaseEntity {
 			CascadeType.MERGE, 
 			CascadeType.PERSIST, 
 			CascadeType.REFRESH}, fetch = FetchType.LAZY)
-	@JoinColumn(name = "engine_capacity_id,")
+	@JoinColumn(name = "engine_capacity_id")
 	private CarEngineCapacity carEngineCapacity;
 	
 	@ManyToOne(cascade = {CascadeType.DETACH, 
 			CascadeType.MERGE, 
 			CascadeType.PERSIST, 
 			CascadeType.REFRESH}, fetch = FetchType.LAZY)
-	@JoinColumn(name = "fuel_type_id,")
+	@JoinColumn(name = "fuel_type_id")
 	private CarFuelType carFuelType;
 
 	public CarModel() {
